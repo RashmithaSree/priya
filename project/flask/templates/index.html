@@ -1,0 +1,90 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flight Delay Predict</title>
+<link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+	.bg-dark {
+		background-color: #42678c!important;
+		background_img:https://content.skyscnr.com/m/67321304423b3aaf/original/flight-information-board-100189707.jpg;
+	}
+	#result {
+		color: #0a1c4ed1;
+	}
+	</style>
+</head>
+<body>
+ <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Welcome</a>
+        <img src="https://content.skyscnr.com/m/67321304423b3aaf/original/flight-information-board-100189707.jpg" style="height:450px"class="img-rounded" alt="Gesture">  
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 bd" >
+			  <h3> Flight Details  </h3>
+			  
+<form action = "/predict" method = "post">
+<p> Departure Time </p>
+<p> <input type = "number" name = "dt"/></p>
+<p> CRS Departure Time  </p>
+<p> <input type ="number" name = "crsdt"/></p>
+<p> Arrival Time </p>
+<p> <input type = "number" name = "at"/></p>
+<p>  CRS Arrival Time </p>
+<p> <input type = "number" name = "crsat"/></p>
+<p>  Distance </p>
+<p> <input type = "number" name = "Di"/></p>
+<label> for = "Origin">Choose an Origin </label>
+<select name = "O">
+<option value = "IAD"> IAD </option>
+<option value = "IND"> IND </option>
+<option value = "ISP"> ISP </option>
+<option value = "JAN"> JAN </option>
+<option value = "JAX"> JAX </option>
+<option value = "LAS"> LAS </option>
+</select>
+<label> for = "Dest">choose a Destination </label>
+<select name = "De">
+<option value = "TPA"> TPA </option>
+<option value = "BWI"> BWI </option>
+<option value = "JAX"> JAX </option>
+<option value = "LAS"> LAS </option>
+<option value = "MCO"> MCO </option>
+<option value = "MDW"> MCO </option>
+<option value = "PHX"> PHX </option>
+<option value = "FLL"> FLL </option>
+<option value = "PBI"> PBI </option>
+<option value = "RSW"> RSW </option>
+<option value = "HOU"> HOU </option>
+<option value = "BHM"> BHM </option>
+<option value = "BNA"> BNA </option>
+<option value = "IND"> IND </option>
+<option value = "PHL"> PHL </option>
+<option value = "ABQ"> ABQ </option>
+<option value = "ALB"> ALB </option>
+<option value = "AMA"> AMA </option>
+<option value = "AUS"> AUS </option>
+<option value = "BDL"> BDL </option>
+</select> 
+
+<p> <input type = "submit" value = "submit"/></p>
+</form>
+<b>{{r}}</b>
+ <h4>*If Flight Delay* </h4>
+			  <br>
+			  <p>If you’re at the airport, the gate agents should be transparent about the cause of the flight delay. If not, ask.
+
+If you see a delay prior to your airport arrival, you can (usually) check on the airline’s site to see if the incoming flight is delayed. A common cause of delay begins with planes leaving behind schedule earlier in the day.
+
+If there is bad weather at your departure or arrival airport, you’ll be able to find this information by checking the airport’s websites. Most airports post notifications of bad weather that delays arrivals/departures. </p>
+<body/>
+</html>
